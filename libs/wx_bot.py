@@ -109,11 +109,12 @@ def geturl_tk(msg, real_url):
         coupon_token = res1['couponLinkTaoToken']
         res_text = '''%s
         【价格】 %s元
+        【返现】 %s元
         【优惠券】%s元
         【优惠后】%s元
     ★复制本条信息、打开手淘可直接跳转至原商家下单、%s淘口令
     ❤如果没有优惠券，您复制本消息购物将为公益捐款1元，谢谢！
-        ''' % (q, price, coupon_amount, yhprice, coupon_token)
+        ''' % (q, price, fx ,coupon_amount, yhprice, coupon_token)
         # res_text = u'''%s
         # 【优惠券】%s元
         # 请复制%s淘口令、打开淘宝APP下单
@@ -129,11 +130,12 @@ def geturl_tk(msg, real_url):
         #                                 ''' % (q, coupon_amount, tao_token, short_link)
         res_text = '''%s
         【价格】 %s元
+        【返现】 %s元
         【优惠券】%s元
         【优惠后】%s元
     ★复制本条信息、打开手淘可直接跳转至原商家下单、%s淘口令
     ❤如果没有优惠券，您复制本消息购物将为公益捐款1元，谢谢！
-        ''' % (q, price, coupon_amount, yhprice, tao_token)
+        ''' % (q, price, fx, coupon_amount, yhprice, tao_token)
     msg.user.send(res_text)
 
 
